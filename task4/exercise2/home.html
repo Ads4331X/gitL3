@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Home Page</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: Arial;
+        text-align: center;
+        background-color: #f2f2f2;
+      }
+
+      header {
+        background: #333;
+        color: rgb(238, 131, 131);
+        padding: 20px;
+        text-align: center;
+      }
+
+      nav {
+        background: #333;
+        color: white;
+        padding: 10px;
+        text-align: center;
+      }
+
+      nav a {
+        margin: 15px;
+        text-decoration: none;
+        font-size: 18px;
+        color: wheat;
+      }
+
+      nav a:hover {
+        color: #ffcc00;
+        text-decoration: underline;
+      }
+
+      nav a:active {
+        color: rgb(243, 185, 185);
+      }
+
+      img {
+        margin-top: 30px;
+        background-color: rgb(197, 172, 172);
+      }
+      .container {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding: 50px;
+        height: 100vh;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Welcome to My Website</h1>
+    </header>
+
+    <nav>
+      <a href="about.html">About Page</a>
+      <a href="about.html#contact">Contact Section</a>
+    </nav>
+
+    <div class="container">
+      <h1>This is the homepage of the website.</h1>
+
+      <div class="icon">
+        <a href="https://www.google.com" target="_blank">
+          <img
+            src="https://storage.googleapis.com/support-kms-prod/ZAl1gIwyUsvfwxoW9ns47iJFioHXODBbIkrK"
+            width="400"
+            height="100"
+          />
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

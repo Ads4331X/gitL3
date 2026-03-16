@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 1</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .image-1 {
+        border: 5px solid black;
+      }
+
+      .image-2 {
+        width: 100px;
+        height: 100px;
+      }
+
+      .image-3 {
+        float: right;
+      }
+
+      .image-4 {
+        margin: 50px;
+      }
+      .container {
+        margin: 0 auto;
+        text-align: center;
+      }
+      hr {
+        height: 10px;
+        background-color: black;
+      }
+      p {
+        font-size: x-large;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <img class="image-1" src="image1.jpg" alt="image 1" />
+        <p>This text is aligned beside image1.</p>
+      </div>
+      <hr />
+      <div>
+        <a href="image2.jpg" target="_blank">
+          <img class="image-2" src="image2.jpg" alt="image 2" />
+        </a>
+        <p>
+          This text is aligned beside image2 and has width and height 100px each
+          on clicking opens original image
+        </p>
+      </div>
+      <hr />
+      <div>
+        <img class="image-3" src="image3.jpg" alt="image 3" />
+        <p>This text is aligned beside image3 and is aligned to right</p>
+      </div>
+      <hr />
+      <div>
+        <img class="image-4" src="image4.jpg" alt="image 4" />
+        <p>This text is aligned beside image4 and has a margin of 50px</p>
+      </div>
+      <hr />
+    </div>
+  </body>
+</html>
