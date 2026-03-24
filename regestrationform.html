@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background: linear-gradient(to right, #74ebd5, #acb6e5);
+      }
+
+      .full-form {
+        width: 500px;
+        margin: auto;
+        padding: 2em;
+        border-radius: 10px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      table {
+        margin: auto;
+        border-collapse: collapse;
+        width: 100%;
+        text-align: left;
+      }
+
+      form {
+        background-color: transparent;
+      }
+
+      td {
+        padding: 10px;
+      }
+
+      label {
+        font-weight: bold;
+        color: #444;
+      }
+
+      input,
+      textarea,
+      select {
+        width: 95%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .inline {
+        width: auto;
+      }
+
+      .actions {
+        text-align: center;
+      }
+
+      button {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        background-color: #5a67d8;
+        color: white;
+        cursor: pointer;
+        margin: 5px;
+      }
+
+      button:hover {
+        background-color: #434190;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="full-form">
+      <h1>Registration Form</h1>
+
+      <form action="#" method="post" autocorrect="on">
+        <table border="1">
+          <tr>
+            <td><label for="first-name">First Name:</label></td>
+            <td><input type="text" id="first-name" name="first-name" /></td>
+          </tr>
+
+          <tr>
+            <td><label for="last-name">Last Name:</label></td>
+            <td><input type="text" id="last-name" name="last-name" /></td>
+          </tr>
+
+          <tr>
+            <td><label for="password">Password:</label></td>
+            <td><input type="password" id="password" name="password" /></td>
+          </tr>
+
+          <tr>
+            <td><label for="re_password">Confirm Password:</label></td>
+            <td>
+              <input type="password" id="re_password" name="re_password" />
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="email">Email:</label></td>
+            <td><input type="email" id="email" name="email" /></td>
+          </tr>
+
+          <tr>
+            <td><label for="phone">Phone:</label></td>
+            <td><input type="tel" id="phone" name="phone" /></td>
+          </tr>
+
+          <tr>
+            <td><label for="address">Address:</label></td>
+            <td><textarea id="address" name="address"></textarea></td>
+          </tr>
+
+          <tr>
+            <td>Gender:</td>
+            <td>
+              <input class="inline" type="radio" name="gender" value="male" />
+              Male
+              <input class="inline" type="radio" name="gender" value="female" />
+              Female
+            </td>
+          </tr>
+
+          <tr>
+            <td>Hobbies:</td>
+            <td>
+              <input class="inline" type="checkbox" value="cricket" /> Cricket
+              <input class="inline" type="checkbox" value="football" /> Football
+              <input class="inline" type="checkbox" value="badminton" />
+              Badminton
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="dob">DOB:</label></td>
+            <td><input type="date" id="dob" name="dob" /></td>
+          </tr>
+
+          <tr>
+            <td><label for="country">Country:</label></td>
+            <td>
+              <select id="country" name="country">
+                <option>Nepal</option>
+                <option>India</option>
+                <option>Bhutan</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="file">Upload File:</label></td>
+            <td><input type="file" id="file" name="file" /></td>
+          </tr>
+
+          <tr>
+            <td colspan="2" class="actions">
+              <button type="submit">Save My Data</button>
+              <button type="reset">Reset My Data</button>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>
