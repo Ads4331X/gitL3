@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        border: 1px solid black;
+        width: fit-content;
+        padding: 20px;
+        margin: 20px auto;
+      }
+
+      .container h1 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+
+      td {
+        padding: 8px 10px;
+        vertical-align: middle;
+      }
+
+      td:first-child {
+        width: 110px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      select {
+        width: 200px;
+        padding: 2px 4px;
+        border: 1px solid #aaa;
+      }
+
+      textarea {
+        width: 400px;
+        height: 130px;
+        border: 1px solid #aaa;
+        resize: vertical;
+      }
+
+      .gender label,
+      .hobbies label {
+        margin-right: 10px;
+      }
+
+      button {
+        padding: 4px 14px;
+        margin-right: 6px;
+        border: 1px solid #aaa;
+        background-color: #f0f0f0;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>HTML Form Test</h1>
+      <form action="#" method="post">
+        <table>
+          <tr>
+            <td><label for="Name">Name</label></td>
+            <td><input type="text" id="Name" name="Name" /></td>
+          </tr>
+          <tr>
+            <td><label for="Address">Address</label></td>
+            <td><input type="text" id="Address" name="Address" /></td>
+          </tr>
+          <tr>
+            <td><label for="Email">Email</label></td>
+            <td><input type="email" id="Email" name="Email" /></td>
+          </tr>
+          <tr>
+            <td><label>Gender</label></td>
+            <td class="gender">
+              <input type="radio" id="Male" name="Gender" value="Male" />
+              <label for="Male">Male</label>
+              <input type="radio" id="Female" name="Gender" value="Female" />
+              <label for="Female">Female</label>
+            </td>
+          </tr>
+          <tr>
+            <td><label>Hobbies</label></td>
+            <td class="hobbies">
+              <input
+                type="checkbox"
+                id="Sports"
+                name="Hobbies"
+                value="Sports"
+              />
+              <label for="Sports">Sports</label>
+              <input
+                type="checkbox"
+                id="Movies"
+                name="Hobbies"
+                value="Movies"
+              />
+              <label for="Movies">Movies</label>
+              <input
+                type="checkbox"
+                id="Travelling"
+                name="Hobbies"
+                value="Travelling"
+              />
+              <label for="Travelling">Travelling</label>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="country">Country</label></td>
+            <td>
+              <select id="country" name="country">
+                <option>Nepal</option>
+                <option>India</option>
+                <option>Bhutan</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="message">Message</label></td>
+            <td><textarea name="message" id="message"></textarea></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <button type="submit">Submit</button>
+              <button type="reset">Reset</button>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>
