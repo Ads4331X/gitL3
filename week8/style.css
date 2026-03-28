@@ -1,0 +1,50 @@
+/* Task 1 & 2 */
+body {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  background-color: #ccffff;
+}
+
+h1 {
+  font-size: 14px;
+  font-variant: small-caps;
+  color: #ff0000;
+  background-color: #00ff00;
+  /* Task 3 */
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  /* Task 4 */
+  z-index: 2;
+}
+
+/* Task 2 */
+p:first-letter {
+  font-size: 200%;
+}
+
+.income {
+  background-color: #cccccc;
+}
+
+.expenses {
+  background-color: #ff0000;
+}
+
+.profit {
+  background-color: #ffff00;
+}
+
+#budgetsummary {
+  background-color: #ffffff;
+  border: dotted;
+  /* Task 3 */
+  padding: 20px;
+  width: 500px;
+  position: absolute;
+  /* Task 3: bottom: 0px replaced by Task 4 below */
+  /* bottom: 0px; */
+  /* Task 4 */
+  top: 0px;
+  z-index: 1;
+}
