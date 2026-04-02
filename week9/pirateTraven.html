@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stinky Pete's Pirate Tavern</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Verdana;
+        color: #330000;
+      }
+
+      body {
+        background-color: #00bfff;
+      }
+      .container {
+        border: 2px solid black;
+        text-align: center;
+        margin: 20px;
+        width: fit-content;
+      }
+      .heading,
+      .footer {
+        background-color: #ccaa66;
+        padding: 20px;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+      }
+      .content-container {
+        display: flex;
+        flex-wrap: nowrap;
+      }
+      .nav {
+        background-color: #e8d882;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding: 20px;
+      }
+
+      .nav a {
+        cursor: pointer;
+        margin: 10px;
+        text-decoration: none;
+      }
+      a:not(:active) {
+        color: blue;
+      }
+
+      .nav .home:active {
+        color: red;
+      }
+
+      .nav .grog:active {
+        color: rgb(255, 0, 179);
+      }
+
+      .nav .shanties:active {
+        color: green;
+      }
+      .main-content {
+        background-color: #f1e8b0;
+        text-align: left;
+        padding: 10px;
+      }
+
+      .lists-pics {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: row;
+        padding: 20px;
+        flex-wrap: nowrap;
+      }
+
+      .lists-pics div {
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        align-items: start;
+      }
+      ul {
+        padding: 20px;
+        text-align: left;
+      }
+
+      li {
+        flex-wrap: nowrap;
+      }
+      img {
+        height: 200px;
+        width: 200px;
+      }
+
+      .footer-content {
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading">
+        <h1>Stinky Pete's Pirate Tavern</h1>
+      </div>
+      <div class="content-container">
+        <div class="nav">
+          <a href="#" class="link home">Home</a>
+          <a href="#" class="link grog">Grog</a
+          ><a href="#" class="link shanties">Shanties</a
+          ><a href="#" class="link swab">Become a swab</a>
+        </div>
+        <div class="main-content">
+          <p>Avast maties! Here ye'll be findin' all these delights...</p>
+          <div class="lists-pics">
+            <div>
+              <ul>
+                <li>Great gorg</li>
+                <li>All the run you can drink</li>
+                <li>
+                  Good honest pirate fare like weevely biscuts and stewed rat
+                </li>
+                <li>Wenches and swabs for every taste</li>
+                <li>Salty seadogs singin' shanties</li>
+                <li>...</li>
+              </ul>
+              <p>Berth 23</p>
+              <p>Nottingham Docks</p>
+              <p>0115 9324567</p>
+            </div>
+            <img src="../week9/pirate.png" alt="pirate picture" />
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer-content">
+          <div class="copyright">
+            Copyright @ 2011 Stinky Pete's Pirate Traven
+          </div>
+          <a href="#">stinkeypete@anrr.com</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Task 1 - Flex Layout</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      .table {
+        display: flex;
+        flex-direction: column;
+        width: 480px;
+        border: 2px solid olive;
+      }
+
+      /* Header row */
+      .row {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .cell {
+        border: 1px solid olive;
+        padding: 8px;
+      }
+
+      /* Column widths */
+      .col1 {
+        width: 160px;
+      }
+      .col2 {
+        width: 160px;
+      }
+      .col3 {
+        width: 160px;
+      }
+
+      /* Header cells */
+      .header {
+        background-color: #ffffff;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      /* Content cell colors */
+      .blue {
+        background-color: lightblue;
+      }
+      .yellow {
+        background-color: yellow;
+        text-align: center;
+        font-weight: bold;
+      }
+      .red {
+        background-color: red;
+        text-align: center;
+        font-weight: bold;
+        color: white;
+      }
+      .green {
+        background-color: green;
+        color: white;
+      }
+
+      /* The blue cell spans the full height of row 2 */
+      .tall {
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Nested column for col2+col3 stacked */
+      .col2-col3 {
+        display: flex;
+        flex-direction: column;
+        width: 320px;
+      }
+
+      .col2-col3 .top-row {
+        display: flex;
+        flex-direction: row;
+      }
+
+      ol,
+      ul {
+        padding-left: 20px;
+      }
+
+      li {
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="table">
+      <!-- Header Row -->
+      <div class="row">
+        <div class="cell col1 header">Column 1</div>
+        <div class="cell col2 header">Column 2</div>
+        <div class="cell col3 header">Column 3</div>
+      </div>
+
+      <!-- Content Row -->
+      <div class="row">
+        <!-- Column 1: blue with numbered list -->
+        <div class="cell col1 blue">
+          <p>A numbered list:</p>
+          <ol>
+            <li>Able</li>
+            <li>Baker</li>
+            <li>Charlie</li>
+            <li>Delta</li>
+            <li>Echo</li>
+          </ol>
+        </div>
+
+        <!-- Columns 2 & 3: stacked layout -->
+        <div class="col2-col3">
+          <!-- Top: yellow B and red C side by side -->
+          <div class="top-row">
+            <div class="cell col2 yellow">B</div>
+            <div class="cell col3 red">C</div>
+          </div>
+
+          <!-- Bottom: green spanning both col2 and col3 -->
+          <div class="cell green" style="flex: 1">
+            <p>An unnumbered list:</p>
+            <ul>
+              <li>Pounds</li>
+              <li>Dollars</li>
+              <li>Euro</li>
+              <li>Yen</li>
+              <li>Roubles</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
