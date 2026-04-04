@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>use of if else if else statement in js</title>
+  </head>
+  <body>
+    <div class="container">
+      <input
+        type="number"
+        name="marks"
+        id="marks"
+        placeholder="Enter Your Marks"
+      />
+      <button onclick="calculateGrade()" type="submit" class="submit">
+        Calculate Grade
+      </button>
+    </div>
+  </body>
+
+  <script>
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        calculateGrade();
+      }
+    });
+    let marksInput = document.getElementById("marks");
+
+    function calculateGrade() {
+      let marks = parseFloat(marksInput.value);
+      let result;
+
+      if (isNaN(marks)) {
+        alert("Please enter your marks.");
+        return;
+      }
+      if (marks > 100 || marks < 0) {
+        alert("Please enter a valid mark between 0 and 100.");
+        return;
+      }
+      if (marks >= 80) {
+        result = "Distinction";
+      } else if (marks >= 60) {
+        result = "First Division";
+      } else if (marks >= 50) {
+        result = "Second Division";
+      } else if (marks >= 40) {
+        result = "Third Division";
+      } else {
+        result = "Fail";
+      }
+
+      alert("Result: " + result);
+    }
+  </script>
+</html>

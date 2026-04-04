@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculate Area of Rectangle</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Calculate Area of Rectangle</h1>
+      <div class="input-flex">
+        <label for="length">Length:</label>
+        <input type="number" id="length" name="length" />
+        <p>m</p>
+      </div>
+      <br />
+      <div class="input-flex">
+        <label for="width">Width:</label>
+        <input type="number" id="width" name="width" />
+        <p>m</p>
+      </div>
+      <br />
+      <button onclick="calculateArea()">Calculate Area</button>
+    </div>
+    <p id="result"></p>
+  </body>
+
+  <script>
+    // STYLES
+    let container = document.querySelector(".container");
+    container.style.textAlign = "center";
+    container.style.fontWeight = "bold";
+    container.style.fontSize = "18px";
+    container.style.margin = "20px";
+    container.style.padding = "10px";
+    container.style.backgroundColor = "#f0f0f0";
+    container.style.border = "1px solid #ccc";
+
+    // INPUT FLEX -- display flex for label, input, and unit
+    let inputFlexes = document.querySelectorAll(".input-flex");
+    inputFlexes.forEach((flex) => {
+      flex.style.display = "flex";
+      flex.style.justifyContent = "center";
+      flex.style.alignItems = "center";
+      flex.style.gap = "10px";
+    });
+
+    // INPUTS
+    let lengthInput = document.getElementById("length");
+    let widthInput = document.getElementById("width");
+    lengthInput.style.margin = "10px";
+    widthInput.style.margin = "10px";
+    lengthInput.style.padding = "15px";
+    widthInput.style.padding = "15px";
+
+    // BUTTON
+    let button = document.querySelector("button");
+    button.style.marginTop = "10px";
+    button.style.padding = "10px 20px";
+    button.style.fontSize = "16px";
+    button.style.cursor = "pointer";
+
+    // RESULT
+    let result = document.getElementById("result");
+    result.style.marginTop = "30px";
+    result.style.color = "#333";
+    result.style.fontWeight = "bold";
+    result.style.fontSize = "18px";
+    result.style.textAlign = "center";
+
+    // FUNCTION TO CALCULATE AREA
+    function calculateArea() {
+      const length = parseFloat(document.getElementById("length").value);
+      const width = parseFloat(document.getElementById("width").value);
+      if (isNaN(length) || isNaN(width)) {
+        result.textContent = "Please enter valid numbers for length and width.";
+        return;
+      }
+      const area = length * width;
+      result.textContent = `The area of the rectangle is: ${area} m²`;
+    }
+  </script>
+</html>

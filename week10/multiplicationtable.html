@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiplication Table</title>
+  </head>
+  <body>
+    <h1>Multiplication Table</h1>
+    <div class="container"></div>
+  </body>
+  <script>
+    let container = document.querySelector(".container");
+    container.style.fontSize = "20px";
+    container.style.fontFamily = "Arial, sans-serif";
+    container.style.margin = "20px";
+    container.style.padding = "10px";
+    container.style.backgroundColor = "#f0f0f0";
+    container.style.border = "1px solid #ccc";
+    container.style.borderRadius = "5px";
+    container.style.width = "200px";
+    container.style.textAlign = "center";
+
+    for (let i = 1; i <= 10; i++) {
+      let p = document.createElement("p");
+      p.textContent = `5 x ${i} = ${i * 5}`;
+      container.appendChild(p);
+    }
+  </script>
+</html>

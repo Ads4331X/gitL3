@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table using loops</title>
+  </head>
+  <body>
+    <div class="container"></div>
+  </body>
+  <script>
+    let container = document.querySelector(".container");
+    container.style.textAlign = "center";
+
+    const table = document.createElement("table");
+    table.style.margin = "40px auto";
+    table.style.borderCollapse = "separate";
+    table.style.borderSpacing = "2px 4px";
+    table.style.width = "80%";
+
+    //  HEADER ROW
+    const headerRow = table.insertRow();
+    headerRow.style.backgroundColor = "#1a7a8a";
+    headerRow.style.color = "whitesmoke";
+    headerRow.style.fontSize = "16px";
+
+    ["S.N.", "Name", "Image"].forEach((item) => {
+      const th = document.createElement("th");
+      th.textContent = item;
+      th.style.padding = "14px 20px";
+      th.style.textAlign = "center";
+      th.style.fontWeight = "500";
+      headerRow.appendChild(th);
+    });
+
+    //  DATA ROWS
+    for (let i = 0; i < 4; i++) {
+      const row = table.insertRow();
+      row.style.backgroundColor = i % 2 === 0 ? "#d6eef8" : "#eaf6fb";
+
+      // S.N.
+      const snCell = row.insertCell();
+      snCell.textContent = `${i + 1}`;
+      snCell.style.padding = "6px 20px";
+      snCell.style.textAlign = "center";
+
+      // Name
+      const nameCell = row.insertCell();
+      nameCell.textContent = `Name ${i + 1}`;
+      nameCell.style.padding = "6px 20px";
+      nameCell.style.textAlign = "center";
+
+      // Image
+      const imgCell = row.insertCell();
+      imgCell.style.padding = "6px 20px";
+      imgCell.style.textAlign = "center";
+      const img = document.createElement("img");
+      img.src = `images/${i + 1}.jpg`;
+      img.alt = `Image ${i + 1}`;
+      img.style.width = "100px";
+      img.style.height = "100px";
+      imgCell.appendChild(img);
+    }
+
+    container.appendChild(table);
+  </script>
+</html>

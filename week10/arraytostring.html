@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join Elements of Array into String</title>
+  </head>
+  <body>
+    <div class="container">
+      <label for="array-elements"
+        >Enter array elements (comma separated):</label
+      >
+      <textarea name="array-elements" id="array-elements"></textarea>
+      <button onclick="joinWithComma()">Join With Comma</button>
+      <button onclick="joinWithPlus()">Join With Plus</button>
+    </div>
+    <div class="result">
+      <h3>Joined String:</h3>
+      <p id="joinedString"></p>
+    </div>
+  </body>
+  <script>
+    // STYLES
+    // center container and style it
+    let contianer = document.querySelector(".container");
+    contianer.style.textAlign = "center";
+    contianer.style.fontWeight = "bold";
+    contianer.style.fontSize = "18px";
+    contianer.style.margin = "20px";
+    contianer.style.padding = "10px";
+    contianer.style.backgroundColor = "#f0f0f0";
+    contianer.style.border = "1px solid #ccc";
+    contianer.style.display = "flex";
+    contianer.style.flexDirection = "column";
+    contianer.style.alignItems = "center";
+
+    // TEXTAREA
+    let textarea = document.getElementById("array-elements");
+    textarea.style.margin = "10px";
+    textarea.style.padding = "15px";
+    textarea.style.width = "300px";
+    textarea.style.height = "100px";
+
+    // Buttons
+    let buttons = document.querySelectorAll("button");
+    buttons.forEach((button) => {
+      button.style.marginTop = "10px";
+      button.style.padding = "10px 20px";
+      button.style.fontSize = "16px";
+      button.style.marginLeft = "5px";
+    });
+
+    // RESULT
+    let result = document.getElementById("joinedString");
+    result.style.fontSize = "18px";
+    result.style.fontWeight = "bold";
+    result.style.color = "blue";
+    result.style.marginTop = "20px";
+    result.style.textAlign = "center";
+    document.querySelector(".result").style.textAlign = "center";
+
+    function getArray() {
+      return textarea.value
+        .split(",")
+        .map((item) => item.trim())
+        .filter((item) => item !== "");
+    }
+
+    function joinWithComma() {
+      let arr = getArray();
+      result.textContent = arr.join(",");
+    }
+
+    function joinWithPlus() {
+      let arr = getArray();
+      result.textContent = arr.join("+");
+    }
+  </script>
+</html>

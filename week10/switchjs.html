@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Switch Case in Js</title>
+  </head>
+  <body></body>
+  <script>
+    let day = Number(prompt("Enter a day of the week (1-7) :"));
+    if (!day || isNaN(day)) {
+      alert("Please enter a valid number.");
+    } else {
+      switch (day) {
+        case 1:
+          alert("Today is Sunday");
+          break;
+        case 2:
+          alert("Today is Monday");
+          break;
+        case 3:
+          alert("Today is Tuesday");
+          break;
+        case 4:
+          alert("Today is Wednesday");
+          break;
+        case 5:
+          alert("Today is Thursday");
+          break;
+        case 6:
+          alert("Today is Friday");
+          break;
+        case 7:
+          alert("Today is Saturday");
+          break;
+        default:
+          alert(
+            "Invalid input! Please enter a number between 1 and 7 or a valid day name.",
+          );
+      }
+    }
+  </script>
+</html>

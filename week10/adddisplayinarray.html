@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add and Display Element in Array in Js</title>
+  </head>
+  <body>
+    <div class="container">
+      <label for="element">Element:</label>
+      <input
+        type="text"
+        name="element"
+        id="element"
+        placeholder="Enter a value"
+      />
+      <button onclick="addElement()">Add Element</button>
+      <button onclick="displayElement()">Display Elements</button>
+    </div>
+    <div class="display">
+      <h3>Array Elements:</h3>
+      <ul id="elementList"></ul>
+    </div>
+  </body>
+  <script>
+    // STYLES
+    // center container and style it
+    let container = document.querySelector(".container");
+    container.style.textAlign = "center";
+    container.style.fontWeight = "bold";
+    container.style.fontSize = "18px";
+    container.style.margin = "20px";
+    container.style.padding = "10px";
+    container.style.backgroundColor = "#f0f0f0";
+    container.style.border = "1px solid #ccc";
+
+    // INPUT
+    let elementInput = document.getElementById("element");
+    elementInput.style.margin = "10px";
+    elementInput.style.padding = "15px";
+
+    // STYLE ALL BUTTONS
+    let buttons = document.querySelectorAll("button");
+    buttons.forEach((button) => {
+      button.style.marginTop = "10px";
+      button.style.padding = "10px 20px";
+      button.style.fontSize = "16px";
+      button.style.marginLeft = "5px";
+    });
+
+    let elementsArray = [];
+
+    // FUNCTIONS
+    // to add element to array and display elements in array
+    function addElement() {
+      let elementValue = elementInput.value;
+      if (elementValue) {
+        elementsArray.push(elementValue);
+        elementInput.value = "";
+        alert("Element added to array!");
+      } else alert("Please enter a value.");
+    }
+
+    // to display elements in array in the unordered list
+    function displayElement() {
+      let elementList = document.getElementById("elementList");
+      elementList.innerHTML = "";
+      elementsArray.forEach((element) => {
+        let listItem = document.createElement("li");
+        listItem.textContent = element;
+        elementList.appendChild(listItem);
+      });
+    }
+  </script>
+</html>

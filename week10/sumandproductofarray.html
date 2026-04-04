@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sum and Product of Array of Integers</title>
+  </head>
+  <body>
+    <h1>Sum and Product of Array of Integers</h1>
+    <div class="container">
+      <textarea
+        name="numbers"
+        id="numbers"
+        placeholder="Enter integers separated by commas"
+      ></textarea>
+      <br />
+      <button onclick="calculateSumAndProduct()">
+        Calculate Sum and Product
+      </button>
+    </div>
+    <p id="result"></p>
+  </body>
+
+  <script>
+    let container = document.querySelector(".container");
+    container.style.textAlign = "center";
+    container.style.margin = "20px";
+    container.style.padding = "10px";
+    container.style.backgroundColor = "#f0f0f0";
+    container.style.border = "1px solid #ccc";
+
+    let textarea = document.querySelector("textarea");
+    textarea.style.width = "400px";
+    textarea.style.height = "100px";
+    textarea.style.padding = "10px";
+    textarea.style.fontSize = "16px";
+
+    let button = document.querySelector("button");
+    button.style.marginTop = "10px";
+    button.style.padding = "10px 20px";
+    button.style.fontSize = "16px";
+    button.style.cursor = "pointer";
+
+    let result = document.getElementById("result");
+    result.style.marginTop = "20px";
+    result.style.fontSize = "18px";
+
+    result.style.fontWeight = "bold";
+    result.style.color = "#333";
+    result.style.textAlign = "center";
+    function calculateSumAndProduct() {
+      const input = document.getElementById("numbers").value;
+      const numbers = input.split(",").map(Number);
+      const sum = numbers.reduce((acc, curr) => acc + curr, 0);
+      const product = numbers.reduce((acc, curr) => acc * curr, 1);
+      document.getElementById("result").innerHTML =
+        `<strong>Sum:</strong> ${sum}<br><strong>Product:</strong> ${product}`;
+    }
+  </script>
+</html>
